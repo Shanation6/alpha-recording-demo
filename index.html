@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpha — студия звукозаписи в Красноярске · Концепт сайта</title>
+  <meta name="description" content="Концепт сайта студии звукозаписи Alpha: Красноярск, Карла Маркса, 78Б. Соберите бриф на запись и отправьте его в WhatsApp. Твой голос. Твой трек. Твоя Alpha.">
+  <meta name="theme-color" content="#0b0a08">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0a08'/%3E%3Cpath d='M18 46 L32 16 L46 46 M24 36 H40' stroke='%23c8f542' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#brief">Перейти к брифу на запись</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Alpha — в начало страницы">
+        <svg class="brand-mark" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="12" fill="currentColor" opacity="0.08"></rect>
+          <path d="M18 46 L32 16 L46 46 M24 36 H40" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="brand-name">ALPHA<span class="brand-sub">rec · krsk</span></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#brief"><span class="nav-tc" aria-hidden="true">01</span>Бриф</a></li>
+          <li><a class="nav-link" href="#start"><span class="nav-tc" aria-hidden="true">02</span>Новичкам</a></li>
+          <li><a class="nav-link" href="#listen"><span class="nav-tc" aria-hidden="true">03</span>Послушать</a></li>
+          <li><a class="nav-link" href="#contacts"><span class="nav-tc" aria-hidden="true">04</span>Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-accent btn-sm header-cta" href="#brief">Записаться</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-box" aria-hidden="true"><span></span><span></span></span>
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <p class="tc-line reveal">
+          <span class="rec-dot" aria-hidden="true"></span>
+          <span class="mono">REC&nbsp;<span id="hero-timecode">00:00:00:00</span></span>
+          <span class="tc-sep" aria-hidden="true">/</span>
+          <span class="mono tc-muted">KRASNOYARSK&nbsp;·&nbsp;K.&nbsp;MARKSA&nbsp;78B</span>
+        </p>
+
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-line reveal">Твой голос.</span>
+          <span class="hero-line reveal">Твой трек.</span>
+          <span class="hero-line hero-line-accent reveal">Твоя Alpha.</span>
+        </h1>
+
+        <p class="hero-lead reveal">Студия звукозаписи в Красноярске. Приходи с идеей — от первой строчки до готового трека. Начни с короткого брифа: пара минут, и мы поймём, что тебе нужно.</p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-accent" href="#brief">Собрать бриф
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://vk.ru/alpharec" target="_blank" rel="noopener noreferrer">Послушать в ВК
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-tracks reveal" aria-hidden="true">
+          <div class="track-row">
+            <span class="track-label mono">VOX</span>
+            <div class="track-lane" data-wave="vox"></div>
+          </div>
+          <div class="track-row">
+            <span class="track-label mono">BEAT</span>
+            <div class="track-lane" data-wave="beat"></div>
+          </div>
+          <div class="track-row">
+            <span class="track-label mono">FX</span>
+            <div class="track-lane" data-wave="fx"></div>
+          </div>
+          <div class="playhead" id="hero-playhead"></div>
+          <div class="ruler mono">
+            <span>00:00</span><span>00:08</span><span>00:16</span><span>00:24</span><span>00:32</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TAPE DIVIDER ============ -->
+    <div class="tape" aria-hidden="true">
+      <div class="tape-track mono">
+        <span>ЗАПИСЬ&nbsp;●&nbsp;СВЕДЕНИЕ&nbsp;●&nbsp;ТВОЙ ЗВУК&nbsp;●&nbsp;ALPHA REC&nbsp;●&nbsp;КРАСНОЯРСК&nbsp;●&nbsp;</span>
+        <span>ЗАПИСЬ&nbsp;●&nbsp;СВЕДЕНИЕ&nbsp;●&nbsp;ТВОЙ ЗВУК&nbsp;●&nbsp;ALPHA REC&nbsp;●&nbsp;КРАСНОЯРСК&nbsp;●&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============ BRIEF ============ -->
+    <section class="section section-brief" id="brief" aria-labelledby="brief-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tc mono" aria-hidden="true">TC 00:01:00:00 — SESSION SETUP</p>
+          <h2 class="section-title" id="brief-title">Бриф на запись</h2>
+          <p class="section-lead">Ответь на пять вопросов — сайт соберёт резюме и откроет WhatsApp с готовым сообщением. Ничего не бронируется автоматически: детали и время подтверждает студия в переписке.</p>
+        </div>
+
+        <div class="brief-layout">
+          <form class="brief-form panel reveal" id="brief-form" novalidate>
+            <div class="error-summary" id="error-summary" role="alert" tabindex="-1" hidden>
+              <p class="error-summary-title">Проверь отмеченные поля:</p>
+              <ul class="error-summary-list" id="error-summary-list"></ul>
+            </div>
+
+            <fieldset class="field field-goal">
+              <legend class="field-label">Зачем тебе студия? <span class="req" aria-hidden="true">*</span></legend>
+              <p class="field-hint" id="goal-hint">Выбери один вариант — это пожелание, а не заказ услуги.</p>
+              <div class="chip-group">
+                <label class="chip">
+                  <input type="radio" name="goal" value="Записать вокал / трек" aria-describedby="goal-hint goal-error">
+                  <span class="chip-body">Записать вокал / трек</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="goal" value="Свести и обработать готовый материал">
+                  <span class="chip-body">Свести готовый материал</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="goal" value="Записать подкаст или озвучку">
+                  <span class="chip-body">Подкаст / озвучка</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="goal" value="Первая проба — хочу попробовать">
+                  <span class="chip-body">Первая проба</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="goal" value="Другое (опишу в комментарии)">
+                  <span class="chip-body">Другое</span>
+                </label>
+              </div>
+              <p class="field-error" id="goal-error" hidden></p>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="field-label">Есть готовый материал? <span class="req" aria-hidden="true">*</span></legend>
+              <p class="field-hint" id="material-hint">Текст, бит, демо, референсы — что уже есть на руках.</p>
+              <div class="chip-group">
+                <label class="chip">
+                  <input type="radio" name="material" value="Да, есть текст и бит/минус" aria-describedby="material-hint material-error">
+                  <span class="chip-body">Да, всё готово</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="material" value="Есть частично — покажу в студии">
+                  <span class="chip-body">Частично</span>
+                </label>
+                <label class="chip">
+                  <input type="radio" name="material" value="Нет, начинаю с нуля">
+                  <span class="chip-body">Начинаю с нуля</span>
+                </label>
+              </div>
+              <p class="field-error" id="material-error" hidden></p>
+            </fieldset>
+
+            <div class="field-grid">
+              <div class="field">
+                <label class="field-label" for="people">Сколько участников? <span class="req" aria-hidden="true">*</span></label>
+                <p class="field-hint" id="people-hint">Людей у микрофона, от 1 до 20.</p>
+                <div class="stepper">
+                  <button class="stepper-btn" type="button" data-step="-1" data-target="people" aria-label="Уменьшить число участников">−</button>
+                  <input class="stepper-input mono" type="number" id="people" name="people" inputmode="numeric" min="1" max="20" step="1" value="1" required aria-describedby="people-hint people-error">
+                  <button class="stepper-btn" type="button" data-step="1" data-target="people" aria-label="Увеличить число участников">+</button>
+                </div>
+                <p class="field-error" id="people-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="tracks">Сколько треков? <span class="req" aria-hidden="true">*</span></label>
+                <p class="field-hint" id="tracks-hint">Композиций или эпизодов, от 1 до 30.</p>
+                <div class="stepper">
+                  <button class="stepper-btn" type="button" data-step="-1" data-target="tracks" aria-label="Уменьшить число треков">−</button>
+                  <input class="stepper-input mono" type="number" id="tracks" name="tracks" inputmode="numeric" min="1" max="30" step="1" value="1" required aria-describedby="tracks-hint tracks-error">
+                  <button class="stepper-btn" type="button" data-step="1" data-target="tracks" aria-label="Увеличить число треков">+</button>
+                </div>
+                <p class="field-error" id="tracks-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="date">Желаемая дата <span class="req" aria-hidden="true">*</span></label>
+              <p class="field-hint" id="date-hint">Ориентир для студии — свободное время уточним в WhatsApp.</p>
+              <input class="text-input mono" type="date" id="date" name="date" required aria-describedby="date-hint date-error">
+              <p class="field-error" id="date-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="comment">Комментарий</label>
+              <p class="field-hint" id="comment-hint">Необязательно: жанр, референсы, вопросы. До 600 символов.</p>
+              <textarea class="text-input" id="comment" name="comment" rows="4" maxlength="600" aria-describedby="comment-hint comment-count comment-error" placeholder="Например: хочу записать рэп-трек, есть минус, нужен совет по подаче"></textarea>
+              <p class="char-count mono" id="comment-count" aria-live="off">0 / 600</p>
+              <p class="field-error" id="comment-error" hidden></p>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-accent btn-lg" type="submit">Собрать резюме
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="btn btn-quiet" type="reset" id="brief-reset">Очистить</button>
+            </div>
+            <p class="form-note">Поля со звёздочкой обязательны. Данные никуда не отправляются, пока ты сам не нажмёшь кнопку в резюме.</p>
+          </form>
+
+          <aside class="brief-summary panel reveal" aria-labelledby="summary-title">
+            <div class="summary-head">
+              <p class="mono summary-tc" aria-hidden="true">TAKE 01 — ROUGH MIX</p>
+              <h3 class="summary-title" id="summary-title">Резюме брифа</h3>
+            </div>
+
+            <div class="summary-empty" id="summary-empty">
+              <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><path d="M6 30h4l4-12 6 20 6-28 6 24 4-10h6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <p>Заполни форму слева — здесь появится текст сообщения. Резюме обновляется на лету.</p>
+            </div>
+
+            <dl class="summary-list" id="summary-list" hidden>
+              <div class="summary-row"><dt>Цель</dt><dd id="sum-goal">—</dd></div>
+              <div class="summary-row"><dt>Материал</dt><dd id="sum-material">—</dd></div>
+              <div class="summary-row"><dt>Участники</dt><dd id="sum-people">—</dd></div>
+              <div class="summary-row"><dt>Треки</dt><dd id="sum-tracks">—</dd></div>
+              <div class="summary-row"><dt>Дата</dt><dd id="sum-date">—</dd></div>
+              <div class="summary-row" id="sum-comment-row" hidden><dt>Комментарий</dt><dd id="sum-comment">—</dd></div>
+            </dl>
+
+            <div class="summary-message-wrap" id="summary-message-wrap" hidden>
+              <p class="summary-message-label mono" aria-hidden="true">MESSAGE.TXT</p>
+              <pre class="summary-message mono" id="summary-message" tabindex="0" aria-label="Текст сообщения для WhatsApp"></pre>
+            </div>
+
+            <div class="summary-actions" id="summary-actions" hidden>
+              <a class="btn btn-accent btn-block" id="wa-link" href="https://wa.me/79831661666" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Zm0 2a7 7 0 1 1-3.6 13l-.5-.3-2.7.7.7-2.6-.3-.5A7 7 0 0 1 12 5Zm-2.6 3.3c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 4 2.2.9 2.7.7 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a5.7 5.7 0 0 1-2.9-2.5c-.2-.4 0-.5.2-.7l.6-.7c.2-.2.2-.4.3-.6v-.6l-.9-2c-.2-.5-.4-.5-.6-.5h-.9Z" fill="currentColor"/></svg>
+                Отправить в WhatsApp
+              </a>
+              <button class="btn btn-ghost btn-block" type="button" id="copy-message">Скопировать текст</button>
+              <p class="copy-status mono" id="copy-status" role="status" aria-live="polite"></p>
+            </div>
+
+            <p class="summary-disclaimer">Это твои пожелания, а не подтверждённые услуги или бронь. Стоимость, возможность и время записи студия подтверждает лично.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEGINNERS ============ -->
+    <section class="section section-start" id="start" aria-labelledby="start-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tc mono" aria-hidden="true">TC 00:02:00:00 — FIRST SESSION</p>
+          <h2 class="section-title" id="start-title">Первый раз в студии?</h2>
+          <p class="section-lead">Это нормально — волноваться. Вот как обычно проходит первая запись, чтобы ты пришёл спокойно и подготовленным.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step panel reveal">
+            <span class="step-num mono" aria-hidden="true">01</span>
+            <h3 class="step-title">Пришли идею</h3>
+            <p>Собери бриф на этом сайте или просто напиши в WhatsApp. Текст, бит, демка на диктофон — подойдёт любой набросок, даже если кажется, что «пока ничего нет».</p>
+          </li>
+          <li class="step panel reveal">
+            <span class="step-num mono" aria-hidden="true">02</span>
+            <h3 class="step-title">Обсудите детали</h3>
+            <p>В переписке вы согласуете задачу, дату и длительность. Студия подскажет, что взять с собой и как подготовиться именно к твоему материалу.</p>
+          </li>
+          <li class="step panel reveal">
+            <span class="step-num mono" aria-hidden="true">03</span>
+            <h3 class="step-title">Разогрейся</h3>
+            <p>Первые дубли — черновые, их никто не оценивает. Распойся, привыкни к наушникам и микрофону. Ошибаться на этом этапе — часть процесса.</p>
+          </li>
+          <li class="step panel reveal">
+            <span class="step-num mono" aria-hidden="true">04</span>
+            <h3 class="step-title">Пиши дубли</h3>
+            <p>Записывайте кусками, сколько нужно. Хороший результат собирается из нескольких дублей — так работают все, не только новички.</p>
+          </li>
+          <li class="step panel reveal">
+            <span class="step-num mono" aria-hidden="true">05</span>
+            <h3 class="step-title">Послушай результат</h3>
+            <p>После сессии вы слушаете материал вместе и обсуждаете следующие шаги: что оставить, что дописать, нужна ли дальнейшая обработка.</p>
+          </li>
+        </ol>
+
+        <div class="tips panel reveal">
+          <h3 class="tips-title">Мелочи, которые помогут</h3>
+          <ul class="tips-list">
+            <li>Выучи текст заранее — с листа читать сложнее, чем кажется.</li>
+            <li>Выспись и не приходи сразу после плотного обеда или холодной улицы: голосу нужно 15–20 минут «проснуться».</li>
+            <li>Возьми воду без газа и минус/бит на флешке или в облаке — продублируй файл заранее.</li>
+            <li>Приходи минут на 10 раньше, чтобы не начинать сессию со спешки.</li>
+            <li>Сохраняй референсы: 2–3 трека, звук которых тебе нравится, скажут больше любых слов.</li>
+          </ul>
+          <p class="tips-note">Не уверен, что готов? Выбери в брифе «Первая проба» — начните с короткой ознакомительной встречи.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LISTEN ============ -->
+    <section class="section section-listen" id="listen" aria-labelledby="listen-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tc mono" aria-hidden="true">TC 00:03:00:00 — PLAYBACK</p>
+          <h2 class="section-title" id="listen-title">Послушать работы</h2>
+          <p class="section-lead">Аудиопримеры живут в нашем сообществе ВКонтакте — там они всегда актуальные. Открывай и слушай без регистрации на этом сайте.</p>
+        </div>
+
+        <div class="listen-card panel reveal">
+          <div class="listen-visual" aria-hidden="true">
+            <div class="listen-wave" data-wave="listen"></div>
+            <span class="listen-badge mono">VK · AUDIO</span>
+          </div>
+          <div class="listen-body">
+            <h3 class="listen-title">Alpha · аудиозаписи сообщества</h3>
+            <p>Треки и примеры работ публикуются на странице студии. Если плеер ВКонтакте попросит вход — аудио можно послушать в приложении ВК.</p>
+            <a class="btn btn-accent" href="https://vk.ru/alpharec" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12.5c.6 4.6 3 7.5 8.2 7.5h.6v-4.3c1.9.2 3.3 1.6 3.9 4.3h2.9c-.7-3-2.4-4.6-3.6-5.2 1.2-.7 2.9-2.5 3.3-5.3h-2.6c-.5 2.3-2 4.1-3.9 4.3V9.5H10v7.6c-2-.8-3.6-2.9-3.7-7.6H4Z" fill="currentColor"/></svg>
+              Послушать в ВК
+            </a>
+            <p class="listen-note mono">vk.ru/alpharec</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTS ============ -->
+    <section class="section section-contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tc mono" aria-hidden="true">TC 00:04:00:00 — STUDIO LOCATION</p>
+          <h2 class="section-title" id="contacts-title">Как нас найти</h2>
+        </div>
+
+        <div class="contacts-grid">
+          <div class="contact-card panel reveal">
+            <svg class="contact-icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            <h3 class="contact-title">Адрес</h3>
+            <p class="contact-value">Красноярск,<br>ул. Карла Маркса, 78Б</p>
+            <a class="contact-link" href="https://yandex.ru/maps/?text=Красноярск%2C%20Карла%20Маркса%2C%2078%D0%91" target="_blank" rel="noopener noreferrer">Открыть на карте
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="contact-card panel reveal">
+            <svg class="contact-icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <h3 class="contact-title">WhatsApp</h3>
+            <p class="contact-value">Быстрее всего — сообщением.<br>Ответим и согласуем время.</p>
+            <a class="contact-link" href="https://wa.me/79831661666" target="_blank" rel="noopener noreferrer">Написать в WhatsApp
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="contact-card panel reveal">
+            <svg class="contact-icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path d="M4 12.5c.6 4.6 3 7.5 8.2 7.5h.6v-4.3c1.9.2 3.3 1.6 3.9 4.3h2.9c-.7-3-2.4-4.6-3.6-5.2 1.2-.7 2.9-2.5 3.3-5.3h-2.6c-.5 2.3-2 4.1-3.9 4.3V9.5H10v7.6c-2-.8-3.6-2.9-3.7-7.6H4Z" fill="currentColor"/></svg>
+            <h3 class="contact-title">ВКонтакте</h3>
+            <p class="contact-value">Аудиопримеры, новости<br>и жизнь студии.</p>
+            <a class="contact-link" href="https://vk.ru/alpharec" target="_blank" rel="noopener noreferrer">vk.ru/alpharec
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name footer-logo">ALPHA<span class="brand-sub">rec · krsk</span></span>
+        <p class="footer-tagline mono">END OF SESSION — TC 00:05:00:00</p>
+      </div>
+      <div class="footer-meta">
+        <p>Красноярск, Карла Маркса, 78Б · <a href="https://vk.ru/alpharec" target="_blank" rel="noopener noreferrer">ВК</a> · <a href="https://wa.me/79831661666" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+        <p class="footer-concept"><strong>Концепт сайта.</strong> Не является публичной офертой. Услуги, цены и время записи подтверждаются студией лично.</p>
+        <p class="footer-disclaimer">Не связан с разработчиком сайтов alpha-krsk.ru — это другая организация.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
